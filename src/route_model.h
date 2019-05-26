@@ -15,6 +15,7 @@ class RouteModel : public Model {
         // Add public Node variables and methods here.
         Node *parent = nullptr;
         float h_value = std::numeric_limits<float>::max();
+        float g_value = 0.0;
         Node(){}
         Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
       
