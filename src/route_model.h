@@ -19,7 +19,7 @@ class RouteModel : public Model {
         bool visited = false;
         std::vector<Node *> neighbors;
         float distance(Node node) const {
-          return std::sqrt(pow((this->x - node.x),2) + pow((this->y - node.y), 2));
+          return std::sqrt(std::pow((x - node.x), 2) + std::pow((y - node.y), 2));
         }
         Node(){}
         Node(int idx, RouteModel *search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
