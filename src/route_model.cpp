@@ -7,4 +7,6 @@ RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
         m_Nodes.push_back(Node(counter, this, node));
         counter++;
     }
+
+    CreateNodeToRoadHashmap();
 }
