@@ -28,7 +28,7 @@ RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
         Node node;
         for(int node_index: node_indices) {
             node = parent_model->SNodes()[node_index];
-            if(this->distance(node) != 0 && node.visited == false) {
+            if(this->distance(node) != 0 && !node.visited) {
                 if(closest_node == nullptr || this->distance(node) < this->distance(*closest_node)) {
                     closest_node = &parent_model->SNodes()[node_index];
                 }
