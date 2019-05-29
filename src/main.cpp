@@ -58,6 +58,15 @@ int main(int argc, const char **argv)
     RouteModel model{osm_data};
 
     // Perform search and render results.
+    float start_x, start_y, end_x, end_y;
+    std::cout << "Please enter start node x-axis value (should be in range 0 to 100)" << "\n";
+    std::cin >> start_x;
+    std::cout << "Please enter start node y-axis value (should be in range 0 to 100)" << "\n";
+    std::cin >> start_y;
+    std::cout << "Please enter end node x-axis value (should be in range 0 to 100)" << "\n";
+    std::cin >> end_x;
+    std::cout << "Please enter end node y-axis value (should be in range 0 to 100)" << "\n";
+    std::cin >> end_y;
     RoutePlanner route_planner{model, 10, 10, 90, 90};
     route_planner.AStarSearch();
     float distance = route_planner.GetDistance();
