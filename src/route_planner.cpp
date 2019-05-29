@@ -52,3 +52,7 @@ RouteModel::Node *RoutePlanner::NextNode() {
     open_list.erase(open_list.begin());
     return current_node;
 }
+
+void RoutePlanner::AddNeighbors(RouteModel::Node *node) {
+    
+}
