@@ -37,5 +37,8 @@ float RoutePlanner::CalculateHValue(RouteModel::Node *node) {
 }
 
 RouteModel::Node *RoutePlanner::NextNode() {
-    
+    std::sort(open_list.begin(), open_list.end(), Compare);
+    RouteModel::Node *current_node = open_list.front();
+    open_list.erase(open_list.begin());
+    return current_node;
 }
