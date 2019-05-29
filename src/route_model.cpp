@@ -46,3 +46,7 @@ RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
             }
         }
     }
+
+    RouteModel::Node &RouteModel::FindClosestNode(float x, float y) {
+
+    }
