@@ -40,7 +40,7 @@ RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
     void RouteModel::Node::FindNeighbors() {
         for(auto & road: parent_model->node_to_read[this->index]) {
             std::vector<int> node_indices = parent_model->Ways()[road.way].nodes;
-            Node * neighbor = this->FindNeighbor(node_indices);
+            Node *neighbor = this->FindNeighbor(node_indices);
             if(neighbor != nullptr){
                 this->neighbors.emplace_back(neighbor);
             }
