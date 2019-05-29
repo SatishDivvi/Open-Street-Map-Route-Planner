@@ -36,3 +36,7 @@ RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
         }
         return closest_node;
     }
+
+    void RouteModel::Node::FindNeighbors() {
+        
+    }
