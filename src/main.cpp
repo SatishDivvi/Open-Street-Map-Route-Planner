@@ -67,7 +67,7 @@ int main(int argc, const char **argv)
     std::cin >> end_x;
     std::cout << "Please enter end node y-axis value (should be in range 0 to 100)" << "\n";
     std::cin >> end_y;
-    RoutePlanner route_planner{model, 10, 10, 90, 90};
+    RoutePlanner route_planner{model, start_x, start_y, end_x, end_y};
     route_planner.AStarSearch();
     float distance = route_planner.GetDistance();
     std::cout << "The Distance of the final path calculated is: " << distance << "meters." << "\n";
