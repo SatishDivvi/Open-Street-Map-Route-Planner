@@ -26,3 +26,7 @@ std::vector<RouteModel::Node> RoutePlanner::ConstructFinalPath(RouteModel::Node 
     distance *= m_Model.MetricScale();
     return path_found;
 }
+
+void RoutePlanner::AStarSearch() {
+    
+}
