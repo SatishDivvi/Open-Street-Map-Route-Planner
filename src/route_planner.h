@@ -10,6 +10,7 @@
 class RoutePlanner {
   public:
     RoutePlanner(RouteModel &model, float start_x, float start_y, float end_x, float end_y);
+    float GetDistance() const noexcept { return distance; }
     // Add public variables or methods declarations here.
 
   private:
