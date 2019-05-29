@@ -16,6 +16,7 @@ class RoutePlanner {
     // Add private variables or methods declarations here.
     RouteModel &m_Model;
     RouteModel::Node *start_node;
+    RouteModel::Node *end_node;
 };
 
 #endif
