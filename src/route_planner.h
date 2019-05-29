@@ -23,6 +23,7 @@ class RoutePlanner {
     std::vector<RouteModel::Node> ConstructFinalPath(RouteModel::Node *current_node);
     std::vector<RouteModel::Node*> open_list; 
     float CalculateHValue(RouteModel::Node *node);
+    RouteModel::Node *NextNode();
 };
 
 #endif
