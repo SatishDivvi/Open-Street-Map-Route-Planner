@@ -48,5 +48,23 @@ RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
     }
 
     RouteModel::Node &RouteModel::FindClosestNode(float x, float y) {
-
+        Node node;
+        node.x = x;
+        node.y = y;
+        float min_dist = std::numeric_limits<float>::max();
+        float current_distance;
+        int closest_idx;
+        for(const Model::Road &road : Roads()) {
+            if(road.type != Model::Road::Type::Footway){
+                for(int index: Ways()[road.way].nodes) {
+                    current_distance = node.distance(SNodes()[index]);
+                    if(current_distance < min_dist) {
+                        min_dist = current_distance;
+                        closest_idx = index;
+                    }
+                    
+                }
+            }
+        }
+        return SNodes()[closest_idx];
     }
