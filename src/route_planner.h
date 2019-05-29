@@ -17,6 +17,7 @@ class RoutePlanner {
     RouteModel &m_Model;
     RouteModel::Node *start_node;
     RouteModel::Node *end_node;
+    float distance;
 };
 
 #endif
