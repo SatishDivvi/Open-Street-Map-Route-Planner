@@ -32,6 +32,6 @@ void RoutePlanner::AStarSearch() {
     m_Model.path = ConstructFinalPath(end_node);
 }
 
-float RoutePlanner::CalculateHValue(const RouteModel::Node *node) {
+float RoutePlanner::CalculateHValue(RouteModel::Node *node) {
 
 }

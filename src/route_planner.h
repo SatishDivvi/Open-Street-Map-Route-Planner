@@ -21,7 +21,7 @@ class RoutePlanner {
     RouteModel::Node *end_node;
     float distance;
     std::vector<RouteModel::Node> ConstructFinalPath(RouteModel::Node *current_node);
-    float CalculateHValue(const RouteModel::Node *node);
+    float CalculateHValue(RouteModel::Node *node);
 };
 
 #endif
