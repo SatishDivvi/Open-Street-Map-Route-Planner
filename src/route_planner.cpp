@@ -35,3 +35,7 @@ void RoutePlanner::AStarSearch() {
 float RoutePlanner::CalculateHValue(RouteModel::Node *node) {
     return node->distance(*end_node);
 }
+
+RouteModel::Node *RoutePlanner::NextNode() {
+    
+}
